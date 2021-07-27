@@ -1,5 +1,5 @@
 # <基于BERT模型的自然语言处理实战>一书源码
-The source code and dataset about &lt;>
+The source code and dataset about &lt;基于BERT模型的自然语言处理实战>
 
 
 
@@ -10,5 +10,5 @@ The source code and dataset about &lt;>
 
 #详细说明
 
-![Image text](https://github.com/aianaconda/Machine-Vision-for-TensorFlow-2.x-/blob/master/bertdetail.jpg)
+![Image text](https://github.com/aianaconda/PyTorch_BERT_NLP_BOOK/blob/master/bertdetail.jpg)
 
