@@ -44,12 +44,15 @@ stopids = tokenizer.convert_tokens_to_ids(["."])[0]
 past = None
 for i in range(100):
     with torch.no_grad():
-        output, past = model(tokens_tensor, past=past)
-    token = torch.argmax(output[..., -1, :])
+        output = model(tokens_tensor, past_key_values=past)
+    # print('output:',output)
+    logits = output['logits']
+    past = output['past_key_values']
 
+    token = torch.argmax(logits[..., -1, :])
     indexed_tokens += [token.tolist()]
 
-    if stopids== token.tolist():
+    if stopids == token.tolist():
         break
     tokens_tensor = token.unsqueeze(0)
     
